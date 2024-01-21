@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Search Bar</title>
+    <link rel="stylesheet" type="text/css" href="styles/background.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="styles/general.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Container for search bar, button, and shortcut icons -->
+    <div class="search-container">
+         <!-- Image on top of the search bar -->
+         <form class="google-logo">
+         <div class="top-image-google">
+          
+            <img src="channel-pictures/google-white-logo.png" alt="Top Image">
+        </div>
+        </form>
+        
+        <!-- Form for Google search -->
+        <form action="https://www.google.com/search" method="GET" target="_blank" class="search-form">
+            <!-- Search bar and button section -->
+            <div class="searchbar">
+                <input type="text" class="searchbar__input" name="q" placeholder="This is Balmas!">
+                <button type="submit" class="searchbar__button">
+                    <i class="material-icons">search</i>
+                </button>
+            </div>
+        </form>
+
+        <!-- Shortcut icons section -->
+        <div class="shortcut-icons">
+            <!-- YouTube shortcut -->
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="channel-pictures/youtube_icon.png" alt="YouTube">
+            </a>
+            <!-- ChatGPT shortcut -->
+            <a href="https://www.chatgpt.com" target="_blank">
+                <img src="channel-pictures/chatgpt_icon.png" alt="ChatGPT">
+            </a>
+            <!-- WhatsApp shortcut -->
+            <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" target="_blank">
+                <img src="channel-pictures/whatsapp_icon.png" alt="WhatsApp">
+            </a>
+            <!-- Spotify shortcut -->
+            <a href="https://www.spotify.com" target="_blank">
+                <img src="channel-pictures/spotify_icon.png" alt="Spotify">
+            </a>
+            <!-- Shared Folder shortcut -->
+            <a href="#" onclick=openSharedFolder()>
+                <img src="channel-pictures/owl_icon.png" alt="Shared Folder">
+            </a>        
+                <!-- Remote Desktop Connection shortcut -->
+            <a href="#" onclick="openRemoteDesktopConnection('COMPUTER_NAME_OR_IP')">
+                <img src="channel-pictures/mstsc_icon.png" alt="Remote Desktop">
+            </a>
+                <!-- add mor-->
+
+    </div>
+<script>
+    // Function to open shared folder in File Explorer
+    function openSharedFolder() {
+        var folderPath = '\\\\fileserver01\\OWL';
+        alert("To access the shared folder, follow these instructions:\n\n1. Open File Explorer (Windows Explorer).\n2. In the address bar, type: " + folderPath + "\n3. Press Enter.\n4. If prompted, enter your username and password.");
+    }
+
+     // Function to open Remote Desktop Connection
+     function openRemoteDesktopConnection(computerNameOrIP) {
+        // Replace 'COMPUTER_NAME_OR_IP' with the actual computer name or IP address
+        var command = 'mstsc /v:' + computerNameOrIP;
+        
+        // Create an invisible link element
+        var link = document.createElement('a');
+        link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(command);
+        link.download = 'RemoteDesktopConnection.rdp';
+        
+        // Trigger a click event on the link
+        link.click();
+    }
+</script>
+    </script>
+</body>
+</html>
