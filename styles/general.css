@@ -88,7 +88,7 @@
   justify-content: center; /* Center icons horizontally within the container */
   align-items: center; /* Center icons vertically within the container */
   flex-wrap: wrap; /* Allow icons to wrap to the next line if needed */
-  margin-top: 30%; /* Add top margin for spacing */
+  margin-top: 10%; /* Add top margin for spacing */
 }
 
 /* Styles for each shortcut icon link */
