@@ -13,7 +13,7 @@
 
 /* Body styles, including background image and positioning */
 body {
-  background: url('../channel-pictures/chrome_wallpaper.jpg');
+  background: url('../channel-pictures/chrome_wallpaper1.jpg');
   background-position: right bottom;
   background-size: cover; /* Ensures the background image covers the entire viewport */
   background-repeat: no-repeat; /* Prevents the background image from repeating */
